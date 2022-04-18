@@ -30,6 +30,6 @@ function onMessageHandler(target, tags, message, self){
     if(splitMessage[0] === "!merch"){
         client.say(target, "https://store.sc-network.net");
     } else if(splitMessage[0] === "!info"){
-        client.say(target, "Ich bin ein Bot, der von @hfgd_gaming in Node.js gemacht wurde.");
+        client.say(target, "Ich bin ein Bot, der von @hfgd_gaming in Node.js gemacht wurde. Meinen Code findest du auf https://github.com/hfgd123/twitch-bot. Solltest du dich damit auskennen, klicke da aber bitte nicht drauf. Augenkrebsgefahr!");
     }
 }
