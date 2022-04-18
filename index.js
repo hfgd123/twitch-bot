@@ -14,6 +14,7 @@ const TMI_OPTIONS = {
 // Connect bot to channels and get client instance
 const client = new TMI.client(TMI_OPTIONS);
 client.on('message', onMessageHandler);
+client.on('connected', onConnectedHandler);
 client.connect();
 
 function onMessageHandler(target, tags, message, self){
@@ -31,4 +32,7 @@ function onMessageHandler(target, tags, message, self){
     } else if(splitMessage[0] === "!info"){
         client.say(target, "Ich bin ein Bot, der von @hfgd_gaming in Node.js gemacht wurde. Meinen Code findest du auf https://github.com/hfgd123/twitch-bot. Solltest du dich damit auskennen, klicke da aber bitte nicht drauf. Augenkrebsgefahr!");
     }
+}
+function onConnectedHandler (addr, port) {
+    console.log(`Successfully Connected to ${addr}:${port}`);
 }
