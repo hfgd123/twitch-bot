@@ -13,7 +13,6 @@ const TMI_OPTIONS = {
 }
 // Connect bot to channels and get client instance
 const client = new TMI.client(TMI_OPTIONS);
-client.on('connected', onConnectedHandler);
 client.on('message', onMessageHandler);
 client.connect();
 
